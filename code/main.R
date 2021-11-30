@@ -109,7 +109,7 @@ plotdf <- df2 %>%
 ggplot(plotdf, aes(x=scorediff, y = INCratio)) + geom_line() +
   xlab('Final Score Differential') +
   ylab('Referee Missed-Call Error Rate (Type II Error)') +
-  ggtitle("Referees Swallow Their Whistles More in Super-Close Games") +
+  ggtitle("Referees Swallow Their Whistles in Close Games") +
   theme_minimal()
 ggsave('./plots_figures/closegames.png',device = 'png', height = 5, width = 5,
        bg = '#FFFFFF')

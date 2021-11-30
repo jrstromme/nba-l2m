@@ -111,7 +111,7 @@ ggplot(plotdf, aes(x=scorediff, y = INCratio)) + geom_line() +
   ylab('Referee Missed-Call Error Rate (Type II Error)') +
   ggtitle("Referees Swallow Their Whistles in Close Games") +
   theme_minimal()
-ggsave('./plots_figures/closegames.png',device = 'png', height = 5, width = 5,
+ggsave('./plots_figures/closegames.png',device = 'png', height = 5, width = 5.5,
        bg = '#FFFFFF')
 ggplot(plotdf, aes(x=scorediff, y = ICratio)) + geom_line()
 ggplot(plotdf, aes(x=scorediff, y = Iratio)) + geom_line()
@@ -203,16 +203,16 @@ ggplot(plotdf, aes(x=missingcallspergame,y=missingnoncallspergame)) +
   #theme_void() +
   theme_tufte() +
   xlim(-.04,0.04) +
-  ylim(-0.5,0.5) +
+  ylim(-0.5,0.6) +
   geom_hline(yintercept = 0) +
   geom_vline(xintercept = 0) +
   ylab('Expected Number of Detrimental Non-Calls Per Last Two Minutes') +
   xlab('Expected Number of Detrimental Calls Per Last Two Minutes')
-ggsave('./plots_figures/whistledisadvantage.png',device = 'png', height = 5, width = 5,
+ggsave('./plots_figures/whistledisadvantage.png',device = 'png', height = 5, width = 5.5,
        bg = '#FFFFFF')
 
 
-# Notes:
+ # Notes:
 # -  missingness in 'disadvantaged team' -> some seem like we could
 #    assign disadvantage and the call is affected, but for others not so sure
 #    I'm going with that the NBA was purposeful about not assigning these 
